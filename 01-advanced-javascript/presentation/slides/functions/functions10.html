@@ -1,0 +1,12 @@
+<h2>#4: Functions</h2>
+<p>Hmmzz... IIFE's solve everything right? Let's try them!</p>
+<pre><code>
+  for (var idx = 1; idx <= 10; idx++) {
+    (function(num) {
+      setTimeout(function() {
+        console.log(num);
+      }, 1000 * num);
+    }(idx));
+  }
+</code></pre>
+<p class="fragment">It works because arguments to a function are ... <br /><strong class="fragment">passed by value</strong></p>

@@ -1,0 +1,13 @@
+<h2>#4: Functions</h2>
+<p>However, in ECMAScript 4 and lower (everything up to IE8), <code>undefined</code> is a <strong>mutable</strong> object:</p>
+<pre><code>
+  window.undefined = "Dimitri Mestdagh";
+  
+  var hasName = function(person) {
+    return person.name !== undefined;
+  };
+  
+  console.log(hasName({
+    name: "Dimitri Mestdagh" // This will return false in IE8!!!
+  }));
+</code></pre>

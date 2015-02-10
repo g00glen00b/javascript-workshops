@@ -1,0 +1,22 @@
+<h2>#3: Objects</h2>
+<p>Inheritance is also possible through <strong>prototypal inheritance</strong>:</p>
+<pre><code>
+  var Opticien = function(firstname, lastname) {
+    Person.call(this, firstname, lastname); // super(firstname, lastname)
+    this.job = "IT Consultant";
+  };
+  Opticien.prototype = new Person(); // Opticien extends from Person
+  
+  var me = new Opticien("Dimitri", "Mestdagh");
+  me.sayJob();
+  me.sayName();
+</code></pre>
+
+<aside class="notes">
+    <ul>
+        <li>Inheritance is ook mogelijk via prototypal inheritance</li>
+        <li>Dit doe je door als prototype een nieuwe instantie toe te kennen van het super-prototype</li>
+        <li>Bijvoorbeeld <code>Opticien.prototype = new Person();</code></li>
+        <li>Je kan ook de constructor van het parent prototype uitvoeren, door <code>Person.call()</code> te gebruiken</li>
+    </ul>
+</aside>

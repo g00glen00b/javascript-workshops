@@ -1,0 +1,38 @@
+<h2>#2: Scopes</h2>
+<pre><code>
+  var e = "foo";
+  console.log(e); // ?
+  try {
+    throw "bar";
+  } catch(e) {
+    console.log(e); // ?
+  }
+  console.log(e); // ?
+</code></pre>
+<div class="fragment">
+    <p>Scopes are everywhere</p>
+    <pre><code>
+  var a = "foo";
+  console.log(a);
+
+  function bar() {
+    if (true) {
+      var a = "bar";
+      console.log(a);
+    }
+    console.log(a); // "foo", "bar" or error?
+  }
+  </code></pre>
+</div>
+<p class="fragment">Well... <strong>ALMOST</strong> everywhere</p>
+
+<aside class="notes">
+    <ul>
+        <li>Bij elke nieuwe functie wordt een nieuwe scope of laag gecreëerd</li>
+        <li>Q: Wat is het resultaat van volgende code?</li>
+        <li>A:foo bar foo</li>
+        <li>Ook een <code>catch()</code> clause heeft een eigen scope</li>
+        <li>Q: Wat gebeurt er bij de volgende code?</li>
+        <li>A: bar bar</li>
+    </ul>
+</aside>

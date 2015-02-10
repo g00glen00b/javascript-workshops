@@ -1,0 +1,27 @@
+<h2>#2 Scopes</h2>
+<p>Each scope has access to its outer scope. There is also a "root" scope, which we call the <strong>global scope</strong></p>
+<ul>
+    <li>In browsers this is <code>window</code></li>
+    <li>On Node.js it is <code>global</code></li>
+</ul>
+
+<div class="fragment">
+    <p>Be careful, if you don't use <code>var</code> in front of your variable, it will create the variable on the global scope!</p>
+    <pre><code>
+  function foo() {
+    a = "bar";
+  }
+  foo();
+  console.log(window);
+    </code></pre>
+</div>
+
+<aside class="notes">
+    <ul>
+        <li>Zoals ik al zei, elke scope heeft toegang tot z'n outer scopes</li>
+        <li>Er is ook een globale of root scope waar iedere scope toegang toe heeft</li>
+        <li>In een web browser is dit <code>window</code>, terwijl in Node.js dit <code>global</code> noemt</li>
+        <li>Let altijd op, want als je geen <code>var</code> gebruikt bij het definiëren, dan wordt de variabele op de globale scope geplaatst en niet op de lokale</li>
+        <li>Zoals je kan zien, dit zijn alle objecten die op de globale scope leven, en nu is ook <code>a</code> hier te vinden</li>
+    </ul>
+</aside>

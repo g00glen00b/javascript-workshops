@@ -1,0 +1,41 @@
+<h2>#1: Variables</h2>
+<p>JavaScript is dynamically typed and "autocasts" types to compare. This can lead to funny behavior, for example:</p>
+<div class="left">
+    <pre><code>
+  0 == "0"; // true
+  0 == ""; // true
+    </code></pre>
+    BUT:
+    <pre><code>
+  "0" == ""; // false
+    </code></pre>
+</div>
+<div class="right fragment">
+    <p>Always use <code>===</code></p>
+    <ul class="no-marker full-width">
+        <li><pre><code>
+  "1" === 1; // false
+        </code></pre></li>
+        <li><pre><code>
+  [] === ""; // false
+        </code></pre></li>
+        <li><pre><code>
+  0 === "0"; // false
+        </code></pre></li>
+        <li><pre><code>
+  0 === ""; // false
+        </code></pre></li>
+    </ul></p>
+</div>
+
+<aside class="notes">
+    <ul>
+        <li>Een voorbeeld van zo'n onverwacht resultaat is het volgende</li>
+        <li>De eerste twee expressies geven beiden <code>true</code></li>
+        <li>Een logische redenering zou zijn dat als zowel <code>"0"</code> en <code>""</code> gelijk zijn aan <code>0</code>, dat ze onderling ook gelijk zijn</li>
+        <li>Dit is niet het geval!</li>
+        <li>Gebruik daarom altijd triple comparison (drie is-gelijk-aan tekens)</li>
+        <li>De triple comparison operator geeft enkel <code>true</code> als de vergelijking klopt <strong>en</strong> de types hetzelfde zijn</li>
+        <li>Alle expressies die tot nu toe <code>true</code> gaven, zijn nu <code>false</code></li>
+    </ul>
+</aside>

@@ -1,0 +1,13 @@
+<h2>#4: Functions</h2>
+<p>Let's try to write the numbers 1 to 10 with one second delay each.</p>
+<div class="fragment">
+    <pre><code>
+  for (var idx = 1; idx <= 10; idx++) {
+    setTimeout(function() {
+      console.log(idx);
+    }, 1000 * idx);
+  }
+  </code></pre>
+  <p>Will this work?</p>
+  <p class="fragment"><strong>No!</strong>, think of <a target="_blank" href="#/8">Tip 2</a>.</p>
+</div>

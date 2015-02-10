@@ -1,0 +1,41 @@
+<h2>#2: Scopes</h2>
+<p>JavaScript uses scopes:</p>
+<pre><code>
+  function foo() {
+    var foo = "bar";
+    
+    function bar() {
+      console.log(foo); // "bar" or error?
+    }
+  }
+</code></pre>
+
+<div class="fragment">
+    <p>What about:</p>
+    <pre><code>
+  function foo() {
+    var foo = "bar";
+    
+    function bar() {
+      var foo = "baz";
+      console.log(foo); // "bar" or "baz"?      
+    }
+    
+    console.log(foo); // "bar" or "baz"?
+  }
+    </code></pre>
+</div>
+
+<aside class="notes">
+    <ul>
+        <li>Het eerste deel rond variabelen hebben we nu afgerond</li>
+        <li>Gerelateerd aan variabelen zijn echter ook de scopes</li>
+        <li>Q: Wie weet er wat het resultaat zal zijn, wie denkt er "bar" en wie denkt er undefined (of nog iets anders)</li>
+        <li>A: bar</li>
+        <li>JavaScript werkt met verschillende "lagen", en elke laag kan aan alle variabelen in de lagen errond</li>
+        <li>Q: Wat is het resultaat als we in de <code>bar()</code> functie opnieuw een variabele <code>foo</code> definiëren (BarBar, BarBaz, BazBar of BazBaz)</li>
+        <li>A: bar baz bar</li>
+        <li>De huidige laag heeft echter voorrang</li>
+        <li>Dwz dat als in de local scope een variable <code>foo</code> gedefinieerd is, deze voorrang heeft op die van de bovenstaande lagen</li>
+    </ul>
+</aside>

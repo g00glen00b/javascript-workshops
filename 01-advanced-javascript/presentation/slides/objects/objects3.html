@@ -1,0 +1,33 @@
+<h2>#3: Objects</h2>
+<p>The difference between classes vs prototypes in JavaScript is that they can be changed at runtime:</p>
+<pre><code>
+  var Person = function(firstname, lastname, job) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.job = job;
+  };
+
+  Person.prototype.sayJob = function() {
+    console.log(this.job);
+  };
+  
+  Person.prototype.sayName = function() {
+    console.log(this.firstname + " " + this.lastname);
+  };
+  
+  var me = new Person("Dimitri", "Mestdagh", "IT Consultant");
+  me.sayJob();
+  me.sayName();
+</code></pre>
+
+<aside class="notes">
+    <ul>
+        <li>Prototypes kunnen at runtime verder uitgebreid worden door extra functionaliteit rechtstreeks aan het prototype toe te kennen</li>
+        <li>Dit is een vaak voorkomende practice om bijvoobeeld extra functionaliteit aan bestaande prototypes te geven (zoals bijvoorbeeld <code>String</code>)</li>
+        <li>Nieuw toegevoegde functies kunnen ook gewoon aan de context van het object zelf en kunnen <code>this</code> gebruiken</li>
+        <li>In JavaScript wordt het concept visibility modifiers niet toegepast</li>
+        <li>Maar doordat het prototype een functie is, is er dus ook een aparte scope</li>
+        <li>Als je iets private wenst te maken, kan je dus gewoon aanduiden met <code>var</code> ipv <code>this</code> te gebruiken</li>
+        <li>Let op, de function constructor mag nooit iets returnen</li>
+    </ul>
+</aside>

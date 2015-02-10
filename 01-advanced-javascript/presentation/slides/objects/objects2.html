@@ -1,0 +1,28 @@
+<h2>#3: Objects</h2>
+<p>JavaScript uses prototypes:</p>
+<pre><code>
+  var Opticien = function(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    
+    this.sayName = function() {
+      console.log(this.firstname + " " + this.lastname);
+    };
+  };
+  
+  var me = new Opticien("Dimitri", "Mestdagh");
+  me.sayName();
+</code></pre>
+
+<p><code>Opticien</code> appears to be a normal function, but it can be instantiated using the <code>new</code> keyword. We call this a <strong>prototype</strong>.</p>
+
+<aside class="notes">
+    <ul>
+        <li>In plaats van classes, kennen we in JavaScript prototypes</li>
+        <li>Een prototype ziet eruit als een gewone functie</li>
+        <li>Maar kan geinstantieerd worden met het <code>new</code> keyword</li>
+        <li>Alles wat in de functie staat wordt uitgevoerd op het moment een nieuw object wordt aangemaakt</li>
+        <li>Dit is dus de constructor (= function constructor</li>
+        <li>Zowel de velden als de logica worden gedefinieerd tijdens het instantieren</li>
+    </ul>
+</aside>

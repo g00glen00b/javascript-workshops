@@ -1,0 +1,71 @@
+[
+    "index.md",
+    "intro.html",
+    "variables/variables.html",
+    "variables/comparison.html",
+    "variables/comparison2.html", {
+        "filename": "variables/comparison3.html",
+        "attr": {
+            "data-background": "img/jack-sparrow.jpeg"   
+        }
+    },
+    "scopes/scopes.html",
+    "scopes/scopes2.html", {
+        "filename": "scopes/scopes4.html",
+        "attr": {
+            "data-background": "img/jack-sparrow.jpeg"
+        }
+    },
+    "scopes/scopes5.html", {
+        "filename": "scopes/scopes6.html",
+        "attr": {
+            "data-background": "img/jack-sparrow.jpeg"   
+        }
+    },
+    "objects/objects.html",
+    "objects/objects2.html",
+    "objects/objects3.html",
+    "objects/objects4.html",
+    "objects/objects5.html", {
+        "filename": "objects/objects6.html",
+        "attr": {
+            "data-background": "img/jack-sparrow.jpeg"
+        }
+    },
+    "functions/functions.html",
+    "functions/functions2.html",
+    "functions/functions3.html",
+    "functions/functions4.html",
+    "functions/functions5.html", {
+        "attr": {
+            "data-background": "img/steve.gif"   
+        }
+    },
+    "functions/functions6.html",
+    "functions/functions7.html",
+    "functions/functions8.html",
+    "functions/functions9.html", {
+       "attr": {
+          "data-background": "img/jackie-chan.jpg"   
+       }
+    },
+    "functions/functions10.html", {
+       "attr": {
+         "data-background": "img/aw-yeah.jpg"   
+       }
+    }, {
+       "filename": "functions/functions11.html",
+       "attr": {
+          "data-background": "img/jack-sparrow.jpeg"   
+       }
+    }, "summary.html", {
+        "attr": {
+            "data-background": "img/thank-you.png"
+        }
+    }, {
+        "filename": "end.html",
+        "attr": {
+            "data-background": "#222"   
+        }
+    }
+]
